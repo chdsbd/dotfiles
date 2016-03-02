@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Use case-insensitive TAB autocompletion - https://github.com/necolas/dotfiles
+set completion-ignore-case on
+
+# Auto list tab completions - https://github.com/necolas/dotfiles
+set show-all-if-ambiguous on

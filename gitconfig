@@ -1,0 +1,18 @@
+[user]
+  email = me@christopher.xyz
+  name = Christopher Dignam
+[core]
+  editor = atom --wait
+  autocrlf = false
+  excludesfile = /Users/chris/.gitignore
+  attributesfile = ~/.gitattributes
+[push]
+  default = simple
+[color]
+  ui = auto
+[merge]
+  tool = atom
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true

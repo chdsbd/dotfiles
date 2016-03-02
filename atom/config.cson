@@ -1,0 +1,58 @@
+"*":
+  "atom-beautify":
+    _analyticsUserId: "2b4b8404-a67e-4627-bd7c-729eb6a6c54b"
+    html_indent_inner_html: true
+    markdown_commonmark: true
+    python_max_line_length: 79
+    python_sort_imports: true
+  "autocomplete-go": {}
+  "autocomplete-python": {}
+  core:
+    packagesWithKeymapsDisabled: [
+      "highlight-line"
+    ]
+    projectHome: "/Users/chris/Dropbox/chris/projects/"
+    themes: [
+      "atom-dark-ui"
+      "hybrid-next-syntax"
+    ]
+  editor:
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+    showLineNumbers: true
+    tabLength: 4
+    zoomFontWhenCtrlScrolling: true
+  "exception-reporting":
+    userId: "31ba60e9-67cc-7c51-ad5c-c7bb240bb5ad"
+  "file-icons":
+    forceShow: true
+    onChanges: true
+  "git-diff":
+    showIconsInEditorGutter: true
+  "git-plus": {}
+  "go-plus":
+    environmentOverridesConfiguration: false
+    goPath: "/Users/chris/Dropbox/chris/projects/go"
+  "highlight-line":
+    enableBackgroundColor: false
+    hideHighlightOnSelect: true
+  linter:
+    showErrorPanel: false
+  "linter-golinter": {}
+  "linter-htmlhint": {}
+  "linter-pylint":
+    rcFile: "~/pylintrc"
+  "linter-shellcheck": {}
+  "markdown-preview":
+    useGitHubStyle: true
+  "markdown-writer": {}
+  "merge-conflicts": {}
+  "python-tools": {}
+  script:
+    stopOnRerun: true
+  welcome:
+    showOnStartup: false
+".gfm.source":
+  editor:
+    softWrap: true

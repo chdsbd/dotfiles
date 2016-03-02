@@ -9,10 +9,13 @@ xcode-select --install
 # brew files
 brew install bash
 brew install curl
+brew install djvu2pdf
+brew install ffmpeg
 brew install git
 brew install git-extras
 brew install golang
 brew install nmap
+brew install neovim/neovim/neovim
 brew install python
 brew install python3
 brew install shellcheck
@@ -21,6 +24,14 @@ brew install ssh-copy-id
 brew install sshuttle
 brew install wakeonlan
 brew install wget
+brew install youtube-dl
+
+# completions
+brew install homebrew/versions/bash-completion2
+brew tap homebrew/completions
+brew install apm-bash-completion
+brew install brew-cask-completion
+brew install pip-completion
 
 # cask files
 brew cask install 1password
@@ -37,7 +48,7 @@ brew cask install flux
 brew cask install github-desktop
 brew cask install gmail-notifier
 brew cask install google-chrome
-brew cask install intellij-ieda
+brew cask install intellij-idea
 brew cask install iterm2
 brew cask install keepingyouawake
 brew cask install limechat
@@ -55,6 +66,15 @@ brew cask install transmission
 brew cask install virtualbox
 brew cask install vlc
 
-# taps
 brew tap chdsbd/homebrew-port-map
 brew cask install port-map
+
+brew tap caskroom/fonts
+brew cask install font-latin-modern
+
+# misc
+bash atom-install.sh
+bash js-install.sh
+bash osx-defaults.sh
+bash py-install.sh
+bash rb-install.sh
