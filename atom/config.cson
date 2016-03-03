@@ -42,7 +42,7 @@
   "linter-golinter": {}
   "linter-htmlhint": {}
   "linter-pylint":
-    rcFile: "~/pylintrc"
+    rcFile: "~/.pylintrc"
   "linter-shellcheck": {}
   "markdown-preview":
     useGitHubStyle: true

@@ -15,6 +15,7 @@ brew install ffmpeg
 brew install git
 brew install git-extras
 brew install golang
+brew install httpie
 brew install nmap
 brew install neovim/neovim/neovim
 brew install python
@@ -80,3 +81,4 @@ bash js-install.sh
 bash osx-defaults.sh
 bash py-install.sh
 bash rb-install.sh
+bash iterm-install.sh

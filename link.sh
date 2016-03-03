@@ -17,7 +17,7 @@ link "gitattributes" ".gitattributes"
 link "gitconfig" ".gitconfig"
 link "gitignore" ".gitignore"
 link "inputrc" ".inputrc"
-link "pylintrc" "pylintrc"
+link "pylintrc" ".pylintrc"
 link "remarkrc" ".remarkrc"
 link "tmux.conf" ".tmux.conf"
 
