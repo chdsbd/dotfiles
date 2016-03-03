@@ -8,6 +8,7 @@ xcode-select --install
 
 # brew files
 brew install bash
+brew install ccat
 brew install curl
 brew install djvu2pdf
 brew install ffmpeg
@@ -50,6 +51,7 @@ brew cask install gmail-notifier
 brew cask install google-chrome
 brew cask install intellij-idea
 brew cask install iterm2
+brew cask install java
 brew cask install keepingyouawake
 brew cask install limechat
 brew cask install microsoft-office
