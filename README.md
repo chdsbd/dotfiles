@@ -36,4 +36,13 @@ osx-update.sh
 
 ## Notes
 
-Many files directly from [sbdchd's dotfiles](http://github.com/sbdchd/.dotfiles). Other snippets from various sources referenced in dotfiles themselves.
+The following files must be installed manually
+
+- iMove ([Mac App Store](https://itunes.apple.com/us/app/imovie/id408981434))
+- Xcode ([Mac App Store](https://itunes.apple.com/us/app/xcode/id497799835))
+- Mathematica ([Wolfram.com](https://user.wolfram.com/portal/))
+- Degrees ([Mac App Store](https://itunes.apple.com/us/app/degrees-weather/id430173763))
+- Autodesk Fusion ([Autodesk.com](https://manage.autodesk.com/))
+- Day One ([Mac App Store](http://dayoneapp.com))
+
+*Many files directly from [sbdchd's dotfiles](http://github.com/sbdchd/.dotfiles). Other snippets from various sources referenced in dotfiles themselves.*

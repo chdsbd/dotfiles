@@ -22,3 +22,7 @@ link "remarkrc" ".remarkrc"
 link "tmux.conf" ".tmux.conf"
 
 echo "dotfiles link complete!"
+
+bash itunes-install.sh
+
+echo "iTunes linking done!"
