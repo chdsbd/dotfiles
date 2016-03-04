@@ -24,6 +24,7 @@ brew install shellcheck
 brew install sqlite
 brew install ssh-copy-id
 brew install sshuttle
+brew install uncrustify
 brew install wakeonlan
 brew install wget
 brew install youtube-dl
