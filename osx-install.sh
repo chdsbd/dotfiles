@@ -16,8 +16,8 @@ brew install git
 brew install git-extras
 brew install golang
 brew install httpie
-brew install nmap
 brew install neovim/neovim/neovim
+brew install nmap
 brew install python
 brew install python3
 brew install shellcheck
@@ -78,8 +78,8 @@ brew cask install font-latin-modern
 
 # misc
 bash atom-install.sh
+bash iterm-install.sh
 bash js-install.sh
 bash osx-defaults.sh
 bash py-install.sh
 bash rb-install.sh
-bash iterm-install.sh

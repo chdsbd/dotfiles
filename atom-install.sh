@@ -18,8 +18,8 @@ apm install linter-csslint
 apm install linter-golinter
 apm install linter-htmlhint
 apm install linter-javac
-apm install linter-jshint
 apm install linter-js-yaml
+apm install linter-jshint
 apm install linter-jsonlint
 apm install linter-markdown
 apm install linter-pylint
@@ -29,6 +29,7 @@ apm install linter-xmllint
 apm install merge-conflicts
 apm install save-session
 apm install script
+apm install sort-lines
 apm install vim-mode
 
 # themes
