@@ -124,6 +124,11 @@ if hash virtualenv 2>/dev/null; then
 
 fi
 
+# https://github.com/paulirish/dotfiles/blob/master/.functions
+cdf() {  # short for cdfinder
+  cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`" || exit
+}
+
 # alias python http server if python is installed
 if hash python3 2>/dev/null; then
     alias httpserver='python3 -m http.server'

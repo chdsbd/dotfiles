@@ -17,6 +17,7 @@
       "hybrid-next-syntax"
     ]
   editor:
+    fontSize: 13
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
@@ -35,10 +36,9 @@
     environmentOverridesConfiguration: false
     goPath: "/Users/chris/Dropbox/chris/projects/go"
   "highlight-line":
-    enableBackgroundColor: false
     hideHighlightOnSelect: true
   linter:
-    showErrorPanel: false
+    errorPanelHeight: 122
   "linter-golinter": {}
   "linter-htmlhint": {}
   "linter-pylint":
@@ -49,8 +49,17 @@
   "markdown-writer": {}
   "merge-conflicts": {}
   "python-tools": {}
+  "save-session":
+    dataSaveFolder: "/Users/chris/.atom/packages/save-session/projects"
   script:
     stopOnRerun: true
+  "todo-show":
+    ignoreThesePaths: [
+      "*venv/"
+      "*/lib/"
+      "*/include/"
+    ]
+  "vim-mode": {}
   welcome:
     showOnStartup: false
 ".gfm.source":

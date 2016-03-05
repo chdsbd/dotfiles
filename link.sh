@@ -11,6 +11,10 @@ link() {
 }
 
 # Link .dotfiles to $HOME
+mkdir "$HOME/.atom"
+
+link "atom/config.cson" ".atom/config.cson"
+link "atom/projects.cson" ".atom/projects.cson"
 link "bash_profile" ".bash_profile"
 link "bashrc" ".bashrc"
 link "gitattributes" ".gitattributes"

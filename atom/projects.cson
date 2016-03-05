@@ -1,0 +1,20 @@
+dotfiles:
+  title: "dotfiles"
+  paths: [
+    "/Users/chris/Dropbox/chris/projects/dotfiles"
+  ]
+"rpi-lock":
+  title: "rpi-lock"
+  paths: [
+    "/Users/chris/Dropbox/chris/projects/rpi-lock"
+  ]
+website:
+  title: "website"
+  paths: [
+    "/Users/chris/Dropbox/chris/projects/website/chdsbd.github.io"
+  ]
+projects:
+  title: "projects"
+  paths: [
+    "/Users/chris/Dropbox/chris/projects"
+  ]
