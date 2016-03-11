@@ -4,7 +4,9 @@
       "no-multiple-toplevel-headings": false,
       "list-item-indent": false,
       "maximum-line-length": false,
-      "no-heading-punctuation": false
+      "no-heading-punctuation": false,
+      "no-missing-blank-lines": false,
+      "list-item-spacing": false
     }
   },
   "settings": {

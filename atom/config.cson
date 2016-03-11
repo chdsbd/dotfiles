@@ -22,7 +22,9 @@
     showIndentGuide: true
     showInvisibles: true
     showLineNumbers: true
+    softWrapAtPreferredLineLength: true
     tabLength: 4
+    tabType: "soft"
     zoomFontWhenCtrlScrolling: true
   "exception-reporting":
     userId: "31ba60e9-67cc-7c51-ad5c-c7bb240bb5ad"

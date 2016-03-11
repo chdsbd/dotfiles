@@ -16,6 +16,7 @@ brew install git
 brew install git-extras
 brew install golang
 brew install httpie
+brew install mosh
 brew install neovim/neovim/neovim
 brew install nmap
 brew install python
