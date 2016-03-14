@@ -21,6 +21,8 @@ brew install neovim/neovim/neovim
 brew install nmap
 brew install python
 brew install python3
+brew install ruby
+brew install rbenv
 brew install shellcheck
 brew install sqlite
 brew install ssh-copy-id
@@ -39,8 +41,6 @@ brew install pip-completion
 
 # cask files
 brew cask install 1password
-brew cask install adobe-illustrator-cc
-brew cask install adobe-photoshop-cc
 brew cask install arduino
 brew cask install atom
 brew cask install cyberduck
@@ -84,3 +84,9 @@ bash js-install.sh
 bash osx-defaults.sh
 bash py-install.sh
 bash rb-install.sh
+
+# http://clubmate.fi/upgrade-to-bash-4-in-mac-os-x/
+# Add the new shell to the list of allowed shells
+sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+# Change to the new shell
+chsh -s /usr/local/bin/bash
