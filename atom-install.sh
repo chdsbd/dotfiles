@@ -33,4 +33,4 @@ apm install sort-lines
 apm install vim-mode
 
 # themes
-apm install hybrid-next-ui
+apm install hybrid-next-syntax

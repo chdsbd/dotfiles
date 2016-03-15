@@ -1,6 +1,6 @@
 "*":
   "atom-beautify":
-    _analyticsUserId: "2b4b8404-a67e-4627-bd7c-729eb6a6c54b"
+    analytics: false
     html_indent_inner_html: true
     markdown_commonmark: true
     python_max_line_length: 79
