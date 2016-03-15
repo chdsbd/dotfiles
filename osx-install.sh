@@ -53,7 +53,6 @@ brew cask install github-desktop
 brew cask install gmail-notifier
 brew cask install google-chrome
 brew cask install intellij-idea
-brew cask install iterm2
 brew cask install java
 brew cask install keepingyouawake
 brew cask install limechat
@@ -70,6 +69,9 @@ brew cask install the-unarchiver
 brew cask install transmission
 brew cask install virtualbox
 brew cask install vlc
+
+brew tap caskroom/versions
+brew cask install iterm2-beta
 
 brew tap chdsbd/homebrew-port-map
 brew cask install port-map
