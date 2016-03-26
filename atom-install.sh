@@ -22,6 +22,7 @@ apm install linter-js-yaml
 apm install linter-jshint
 apm install linter-jsonlint
 apm install linter-markdown
+apm install linter-proselint
 apm install linter-pylint
 apm install linter-ruby
 apm install linter-shellcheck

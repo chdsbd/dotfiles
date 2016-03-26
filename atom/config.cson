@@ -2,8 +2,9 @@
   "atom-beautify":
     analytics: false
     html_indent_inner_html: true
+    java_configPath: "~/.uncrustify.cfg"
+    language_python_default_beautifier: "yapf"
     markdown_commonmark: true
-    python_max_line_length: 79
     python_sort_imports: true
   "autocomplete-go": {}
   "autocomplete-python": {}
@@ -46,6 +47,7 @@
     errorPanelHeight: 122
   "linter-golinter": {}
   "linter-htmlhint": {}
+  "linter-javac": {}
   "linter-pylint":
     rcFile: "~/.pylintrc"
   "linter-shellcheck": {}
