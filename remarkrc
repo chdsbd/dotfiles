@@ -1,12 +1,15 @@
 {
   "plugins": {
     "lint": {
-      "no-multiple-toplevel-headings": false,
       "list-item-indent": false,
+      "list-item-spacing": false,
       "maximum-line-length": false,
       "no-heading-punctuation": false,
       "no-missing-blank-lines": false,
-      "list-item-spacing": false
+      "no-multiple-toplevel-headings": false,
+      "table-cell-padding": false,
+      "table-pipes": false,
+      "table-pipe-alignment": false
     }
   },
   "settings": {

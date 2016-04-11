@@ -19,6 +19,8 @@ brew install httpie
 brew install mosh
 brew install neovim/neovim/neovim
 brew install nmap
+brew install npm
+brew install pandoc
 brew install python
 brew install python3
 brew install ruby

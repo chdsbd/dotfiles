@@ -1,12 +1,26 @@
 "*":
   "atom-beautify":
-    analytics: false
-    html_indent_inner_html: true
-    java_configPath: "~/.uncrustify.cfg"
-    language_python_default_beautifier: "yapf"
-    markdown_commonmark: true
-    python_sort_imports: true
+    general:
+      _analyticsUserId: ""
+      analytics: false
+    go:
+      beautify_on_save: true
+    html:
+      indent_inner_html: true
+    java:
+      beautify_on_save: true
+      configPath: "/Users/chris/.uncrustify.cfg"
+    markdown:
+      beautify_on_save: true
+      commonmark: true
+      default_beautifier: "Remark"
+    python:
+      beautify_on_save: true
+      default_beautifier: "yapf"
+      sort_imports: true
   "autocomplete-go": {}
+  "autocomplete-java": {}
+  "autocomplete-plus": {}
   "autocomplete-python": {}
   core:
     audioBeep: false
@@ -23,12 +37,10 @@
       "hybrid-next-syntax"
     ]
   editor:
-    fontSize: 13
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
     showLineNumbers: true
-    softWrapAtPreferredLineLength: true
     tabLength: 4
     tabType: "soft"
     zoomFontWhenCtrlScrolling: true
@@ -45,6 +57,7 @@
     hideHighlightOnSelect: true
   linter:
     errorPanelHeight: 122
+  "linter-bootlint": {}
   "linter-golinter": {}
   "linter-htmlhint": {}
   "linter-javac": {}
