@@ -1,23 +1,63 @@
 "*":
   "atom-beautify":
+    apex: {}
+    arduino: {}
+    c: {}
+    cfml: {}
+    coffeescript: {}
+    cpp: {}
+    cs: {}
+    css: {}
+    d: {}
+    ejs: {}
+    erb: {}
+    fortran: {}
     general:
-      _analyticsUserId: ""
       analytics: false
+    gherkin: {}
     go:
       beautify_on_save: true
+    handlebars: {}
     html:
       indent_inner_html: true
+    jade: {}
     java:
       beautify_on_save: true
       configPath: "/Users/chris/.uncrustify.cfg"
+    js: {}
+    json: {}
+    jsx: {}
+    latex: {}
+    less: {}
     markdown:
       beautify_on_save: true
-      commonmark: true
       default_beautifier: "Remark"
+    marko: {}
+    mustache: {}
+    objectivec: {}
+    pawn: {}
+    perl: {}
+    php: {}
     python:
       beautify_on_save: true
       default_beautifier: "yapf"
       sort_imports: true
+    riot: {}
+    ruby: {}
+    rust: {}
+    sass: {}
+    scss: {}
+    spacebars: {}
+    sql: {}
+    svg: {}
+    swig: {}
+    tss: {}
+    twig: {}
+    typescript: {}
+    vala: {}
+    visualforce: {}
+    xml: {}
+    xtemplate: {}
   "autocomplete-go": {}
   "autocomplete-java": {}
   "autocomplete-plus": {}
