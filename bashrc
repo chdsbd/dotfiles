@@ -443,3 +443,6 @@ fi
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 export HOMEBREW_NO_ANALYTICS=1
+
+# for FZF previous command history search `<CTRL> R`
+# [ -f ~/.fzf.bash ] && source ~/.fzf.bash
