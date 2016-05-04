@@ -31,7 +31,6 @@
     less: {}
     markdown:
       beautify_on_save: true
-      default_beautifier: "Remark"
     marko: {}
     mustache: {}
     objectivec: {}
@@ -77,11 +76,12 @@
       "hybrid-next-syntax"
     ]
   editor:
-    fontSize: 13
+    fontSize: 11
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
     showLineNumbers: true
+    softWrap: true
     tabLength: 4
     tabType: "soft"
     zoomFontWhenCtrlScrolling: true

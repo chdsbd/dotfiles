@@ -48,7 +48,9 @@ brew cask install atom
 brew cask install cyberduck
 brew cask install discord
 brew cask install disk-inventory-x
+brew cask install xbox360-controller-driver
 brew cask install dropbox
+brew cask install exifrenamer
 brew cask install firefox
 brew cask install flux
 brew cask install github-desktop
