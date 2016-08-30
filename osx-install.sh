@@ -65,6 +65,7 @@ brew cask install mobile-mouse-server
 brew cask install pg-commander
 brew cask install plex-media-server
 brew cask install postman
+brew cask install psequel
 brew cask install sdformatter
 brew cask install sketchup
 brew cask install slack

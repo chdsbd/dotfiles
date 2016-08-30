@@ -98,10 +98,6 @@
   "file-icons":
     forceShow: true
     onChanges: true
-  "gist-it":
-    newGistsDefaultToPrivate: true
-    openAfterCreate: true
-    userToken: "fc4d7808bd9292fff42ebef3db61ff7d45e817f8"
   "git-diff":
     showIconsInEditorGutter: true
   "git-plus": {}
