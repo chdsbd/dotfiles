@@ -9,6 +9,7 @@ apm install file-icons
 apm install git-plus
 apm install go-plus
 apm install highlight-line
+apm install language-arduino
 apm install language-liquid
 apm install linter
 apm install linter-bootlint

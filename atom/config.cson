@@ -19,6 +19,8 @@
       beautify_on_save: true
     handlebars: {}
     html:
+      brace_style: "expand"
+      disabled: true
       indent_inner_html: true
     jade: {}
     java:
@@ -30,7 +32,8 @@
     latex: {}
     less: {}
     markdown:
-      beautify_on_save: true
+      commonmark: true
+      yaml: false
     marko: {}
     mustache: {}
     objectivec: {}
@@ -38,7 +41,6 @@
     perl: {}
     php: {}
     python:
-      beautify_on_save: true
       default_beautifier: "yapf"
       sort_imports: true
     riot: {}
@@ -66,6 +68,15 @@
     disabledPackages: [
       "metrics"
       "exception-reporting"
+      "vim-mode"
+      "platformio-ide"
+      "platformio-ide-terminal"
+      "linter-jshint"
+      "linter-pug"
+      "language-liquid"
+      "autoclose-html"
+      "linter-bootlint"
+      "go-debug"
     ]
     packagesWithKeymapsDisabled: [
       "highlight-line"
@@ -76,7 +87,6 @@
       "hybrid-next-syntax"
     ]
   editor:
-    fontSize: 11
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
@@ -88,6 +98,10 @@
   "file-icons":
     forceShow: true
     onChanges: true
+  "gist-it":
+    newGistsDefaultToPrivate: true
+    openAfterCreate: true
+    userToken: "fc4d7808bd9292fff42ebef3db61ff7d45e817f8"
   "git-diff":
     showIconsInEditorGutter: true
   "git-plus": {}
@@ -97,13 +111,27 @@
   "highlight-line":
     hideHighlightOnSelect: true
   linter:
-    errorPanelHeight: 122
+    errorPanelHeight: 125
+    showErrorPanel: false
   "linter-bootlint": {}
+  "linter-eslint":
+    disableWhenNoEslintConfig: false
+  "linter-gcc":
+    gccLintOnTheFly: true
   "linter-golinter": {}
-  "linter-htmlhint": {}
+  "linter-htmlhint":
+    enabledScopes: [
+      "text.html.angular"
+      "text.html.basic"
+      "text.html.erb"
+      "text.html.gohtml"
+      "text.html.jsp"
+      "text.html.mustache"
+      "text.html.ruby"
+      "text.html.jinja"
+    ]
   "linter-javac": {}
-  "linter-pylint":
-    rcFile: "~/.pylintrc"
+  "linter-pylint": {}
   "linter-shellcheck": {}
   "markdown-preview":
     useGitHubStyle: true
@@ -120,9 +148,24 @@
       "*/lib/"
       "*/include/"
     ]
+  "tool-bar":
+    position: "Left"
+  "tree-view": {}
   "vim-mode": {}
   welcome:
     showOnStartup: false
+".arduino.source":
+  editor:
+    tabLength: 4
 ".gfm.source":
   editor:
     softWrap: true
+".html.jinja.text":
+  editor:
+    tabLength: 4
+".html.liquid.text":
+  editor:
+    tabLength: 4
+".jinja.source":
+  editor:
+    tabLength: 4

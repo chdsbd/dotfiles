@@ -48,8 +48,8 @@ brew cask install atom
 brew cask install cyberduck
 brew cask install discord
 brew cask install disk-inventory-x
-brew cask install xbox360-controller-driver
 brew cask install dropbox
+brew cask install eagle
 brew cask install exifrenamer
 brew cask install firefox
 brew cask install flux
@@ -62,7 +62,9 @@ brew cask install keepingyouawake
 brew cask install limechat
 brew cask install microsoft-office
 brew cask install mobile-mouse-server
+brew cask install pg-commander
 brew cask install plex-media-server
+brew cask install postman
 brew cask install sdformatter
 brew cask install sketchup
 brew cask install slack
@@ -73,6 +75,7 @@ brew cask install the-unarchiver
 brew cask install transmission
 brew cask install virtualbox
 brew cask install vlc
+brew cask install xbox360-controller-driver
 
 brew tap caskroom/versions
 brew cask install iterm2-beta
