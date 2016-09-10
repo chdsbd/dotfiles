@@ -5,6 +5,7 @@ apm install atom-beautify
 apm install atom-bootstrap3
 apm install atom-jinja2
 apm install autocomplete-python
+apm install editorconfig
 apm install file-icons
 apm install git-plus
 apm install go-plus

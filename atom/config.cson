@@ -20,7 +20,6 @@
     handlebars: {}
     html:
       brace_style: "expand"
-      disabled: true
       indent_inner_html: true
     jade: {}
     java:
@@ -77,6 +76,7 @@
       "autoclose-html"
       "linter-bootlint"
       "go-debug"
+      "linter-markdown"
     ]
     packagesWithKeymapsDisabled: [
       "highlight-line"
@@ -87,6 +87,7 @@
       "hybrid-next-syntax"
     ]
   editor:
+    fontSize: 12
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true

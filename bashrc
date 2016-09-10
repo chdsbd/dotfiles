@@ -170,7 +170,7 @@ export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 export EDITOR=atom
 
 # Number of lines of commands loaded & stored during a bash session
-HISTSIZE=1000
+HISTSIZE=10000
 # Number of lines of commands stored in .bash_history file persistently
 HISTFILESIZE=10000
 HISTCONTROL=ignoreboth
@@ -443,6 +443,7 @@ fi
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_CASK_OPTS="--caskroom=/opt/homebrew-cask/Caskroom"
 
 # for FZF previous command history search `<CTRL> R`
 # [ -f ~/.fzf.bash ] && source ~/.fzf.bash
