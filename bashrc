@@ -23,7 +23,7 @@ alias mv='mv -iv'
 
 alias ll='ls -l'
 
-alias e='exit'
+alias e='$EDITOR'
 alias q='exit'
 
 # Easier movement
@@ -83,14 +83,14 @@ if hash git 2>/dev/null; then
     alias gcl='git clone'
     alias gco='git checkout'
     alias gd='git diff'
-    alias gl='git log'
+    alias gl='git log --pretty=oneline --abbrev-commit'
     alias glpretty='git log --graph --decorate --pretty=oneline --abbrev-commit'
     alias gp='git push'
     alias gpl='git pull'
     alias gr='git remote'
     alias grb='git rebase'
     alias grm='git rm'
-    alias gs='git status'
+    alias gs='git status --short'
     alias gst='git stash'
     alias gu='git undo'
 fi
@@ -167,7 +167,7 @@ fi
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # set default editor
-export EDITOR=atom
+export EDITOR=nvim
 
 # Number of lines of commands loaded & stored during a bash session
 HISTSIZE=10000
@@ -276,7 +276,7 @@ set_prompts() {
     PS1+=" \[$Cyan\]\$(virtualenv_info)"    # virtual environment status
     PS1+="\[$Cyan\]\${DOCKER_MACHINE_NAME}" # display docker machine name
     PS1+="\n"
-    PS1+="\[$Color_Off\]\$ "                # $ or # depending on user status
+    PS1+="\[$Color_Off\]❯ "                # $ or # depending on user status
 
     export PS1
 }
@@ -417,6 +417,10 @@ if [[ $OS == "linux" ]]; then
 
     export LS_COLORS
 fi
+
+# docker
+alias drmi='docker rmi $(docker images -a -q)'
+alias drm='docker rm $(docker ps -a -q)'
 
 # make * select normal and dot files
 shopt -s dotglob

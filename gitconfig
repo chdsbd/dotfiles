@@ -2,10 +2,11 @@
   email = me@christopher.xyz
   name = Christopher Dignam
 [core]
-  editor = atom --wait
+  editor = vim 
   autocrlf = false
   excludesfile = /Users/chris/.gitignore
   attributesfile = ~/.gitattributes
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [push]
   default = simple
 [color]
@@ -16,3 +17,10 @@
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
   required = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[diff-so-fancy]
+	stripLeadingSymbols = false
