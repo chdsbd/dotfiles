@@ -66,6 +66,7 @@ brew cask install pg-commander
 brew cask install plex-media-server
 brew cask install postman
 brew cask install psequel
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package quicklookase qlvideo
 brew cask install sdformatter
 brew cask install sketchup
 brew cask install slack
