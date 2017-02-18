@@ -58,11 +58,13 @@ alias projects='cd ~/Dropbox/chris/projects'
 alias desktop='cd ~/Desktop'
 alias downloads='cd ~/Downloads'
 alias dropbox='cd ~/Dropbox'
+alias umass='cd ~/Dropbox/chris/umass/2016-2017/spring'
 alias golang='cd $GOPATH/src/github.com/chdsbd'
 alias apps='cd ~/Applications'
 alias trash='cd ~/.Trash'
 alias homebrew='cd /usr/local/Library/Formula'
 alias caskroom='cd /usr/local/Library/Taps/caskroom'
+alias chris='cd ~/Dropbox/chris'
 
 # Use vi bindings in the shell - http://unix.stackexchange.com/a/43005
 set -o vi
@@ -85,10 +87,11 @@ if hash git 2>/dev/null; then
     alias gd='git diff'
     alias gl='git log --pretty=oneline --abbrev-commit'
     alias glpretty='git log --graph --decorate --pretty=oneline --abbrev-commit'
+    alias gitgraph="git log --graph --oneline --all --decorate --topo-order"
     alias gp='git push'
     alias gpl='git pull'
     alias gr='git remote'
-    alias grb='git rebase'
+    alias grb='git rebase -i origin/master'
     alias grm='git rm'
     alias gs='git status --short'
     alias gst='git stash'
@@ -173,7 +176,7 @@ export EDITOR=nvim
 HISTSIZE=10000
 # Number of lines of commands stored in .bash_history file persistently
 HISTFILESIZE=10000
-HISTCONTROL=ignoreboth
+HISTCONTROL=ignoreboth:erasedups
 
 prompt_git() {
     # https://github.com/necolas/dotfiles
@@ -421,6 +424,8 @@ fi
 # docker
 alias drmi='docker rmi $(docker images -a -q)'
 alias drm='docker rm $(docker ps -a -q)'
+alias drmv='docker volume rm $(docker volume ls -q)'
+# alias drmv='docker volume rm $(docker volume ls -qf dangling=true)'
 
 # make * select normal and dot files
 shopt -s dotglob

@@ -1,5 +1,5 @@
 [user]
-  email = me@christopher.xyz
+  email = chris@dignam.xyz 
   name = Christopher Dignam
 [core]
   editor = vim 
@@ -24,3 +24,9 @@
 	newHighlight = green bold 22
 [diff-so-fancy]
 	stripLeadingSymbols = false
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
