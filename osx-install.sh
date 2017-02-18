@@ -76,6 +76,7 @@ brew cask install keepingyouawake
 brew cask install kitematic
 brew cask install limechat
 brew cask install microsoft-office
+brew cask install minikube
 brew cask install mobile-mouse-server
 brew cask install pg-commander
 brew cask install plex-media-server
