@@ -454,5 +454,7 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_CASK_OPTS="--caskroom=/opt/homebrew-cask/Caskroom"
 
+. /usr/local/etc/profile.d/z.sh
+
 # for FZF previous command history search `<CTRL> R`
 # [ -f ~/.fzf.bash ] && source ~/.fzf.bash

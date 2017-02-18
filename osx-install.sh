@@ -43,6 +43,7 @@ brew install uncrustify
 brew install wakeonlan
 brew install wget
 brew install youtube-dl
+brew install z
 
 # completions
 brew install homebrew/versions/bash-completion2
