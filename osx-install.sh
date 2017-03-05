@@ -55,7 +55,6 @@ brew install pip-completion
 # cask files
 brew cask install 1password
 brew cask install arduino
-brew cask install atom
 brew cask install calibre
 brew cask install coolterm
 brew cask install cyberduck
@@ -94,6 +93,7 @@ brew cask install sqlitebrowser
 brew cask install steam
 brew cask install sublime-text
 brew cask install the-unarchiver
+brew cask install torbrowser
 brew cask install transmission
 brew cask install virtualbox
 brew cask install vlc
