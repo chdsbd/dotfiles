@@ -19,6 +19,7 @@ brew install git
 brew install git-extras
 brew install golang
 brew install heroku
+brew install homebrew/dupes/less
 brew install httpie
 brew install mosh
 brew install neovim/neovim/neovim
@@ -41,6 +42,7 @@ brew install the_silver_searcher
 brew install tig
 brew install uncrustify
 brew install wakeonlan
+brew install watchexec
 brew install wget
 brew install youtube-dl
 brew install z
