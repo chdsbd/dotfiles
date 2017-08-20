@@ -13,11 +13,8 @@ link() {
 # Link .dotfiles to $HOME
 mkdir "$HOME/.atom"
 
-link "atom/config.cson" ".atom/config.cson"
-link "atom/projects.cson" ".atom/projects.cson"
 link "bash_profile" ".bash_profile"
 link "bashrc" ".bashrc"
-link "cloudflare.sh" ".cloudflare.sh"
 link "gitattributes" ".gitattributes"
 link "gitconfig" ".gitconfig"
 link "gitignore" ".gitignore"
@@ -25,8 +22,7 @@ link "inputrc" ".inputrc"
 link "uncrustify.cfg" ".uncrustify.cfg"
 link "pylintrc" ".pylintrc"
 link "remarkrc" ".remarkrc"
-link "tmux.conf" ".tmux.conf"
-
+link "sublime-text/User" "Library/Application Support/Sublime Text 3/Packages"
 echo "dotfiles link complete!"
 
 bash itunes-install.sh

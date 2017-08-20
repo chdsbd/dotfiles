@@ -89,6 +89,7 @@ if hash git 2>/dev/null; then
     alias glpretty='git log --graph --decorate --pretty=oneline --abbrev-commit'
     alias gitgraph="git log --graph --oneline --all --decorate --topo-order"
     alias gp='git push'
+    alias gps='git push --set-upstream origin $(git symbolic-ref --short HEAD)'
     alias gpl='git pull'
     alias gr='git remote'
     alias grb='git rebase -i origin/master'

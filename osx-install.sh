@@ -9,6 +9,7 @@ xcode-select --install
 # brew files
 brew install bash
 brew install ccat
+brew install chainsawbaby/formula/bash-snippets
 brew install curl
 brew install diff-so-fancy
 brew install djvu2pdf
@@ -72,6 +73,7 @@ brew cask install flux
 brew cask install gitup
 brew cask install gmail-notifier
 brew cask install google-chrome
+brew cask install insomnia
 brew cask install intellij-idea
 brew cask install java
 brew cask install keepingyouawake
@@ -82,7 +84,6 @@ brew cask install minikube
 brew cask install mobile-mouse-server
 brew cask install pg-commander
 brew cask install plex-media-server
-brew cask install postman
 brew cask install psequel
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package quicklookase qlvideo
 brew cask install sdformatter
@@ -109,6 +110,8 @@ brew cask install port-map
 
 brew tap caskroom/fonts
 brew cask install font-latin-modern
+brew cask install font-fira-code
+brew cask install font-source-code-pro
 
 # misc
 bash atom-install.sh
