@@ -73,6 +73,7 @@ brew cask install flux
 brew cask install gitup
 brew cask install gmail-notifier
 brew cask install google-chrome
+brew cask install iina
 brew cask install insomnia
 brew cask install intellij-idea
 brew cask install java
