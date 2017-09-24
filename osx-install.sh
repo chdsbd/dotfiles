@@ -22,6 +22,7 @@ brew install golang
 brew install heroku
 brew install homebrew/dupes/less
 brew install httpie
+brew install jq
 brew install mosh
 brew install neovim/neovim/neovim
 brew install nmap
@@ -33,6 +34,7 @@ brew install python
 brew install python3
 brew install rbenv
 brew install redis
+brew install ripgrep
 brew install ruby
 brew install scala
 brew install shellcheck
@@ -44,6 +46,7 @@ brew install tig
 brew install uncrustify
 brew install wakeonlan
 brew install watchexec
+brew install watson
 brew install wget
 brew install youtube-dl
 brew install z

@@ -53,6 +53,9 @@ fi
 export GOPATH=$HOME/Dropbox/$USER/projects/go
 export PATH=$PATH:$GOPATH/bin
 
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Default places
 alias projects='cd ~/Dropbox/chris/projects'
 alias desktop='cd ~/Desktop'
@@ -139,6 +142,9 @@ if hash python3 2>/dev/null; then
 elif hash python2 2>/dev/null; then
     alias httpserver='python2 -m SimpleHTTPServer'
 fi
+
+# time stamp history
+export HISTTIMEFORMAT="%Y-%m-%d %T "
 
 # General Commands
 alias c="clear"
@@ -267,6 +273,22 @@ Blue='\e[0;34m'         # Blue
 Purple='\e[0;35m'       # Purple
 Cyan='\e[0;36m'         # Cyan
 
+# show watson status in prompt - https://github.com/TailorDev/Watson
+export WATSON_DIR=~/.watson
+get_watson_status() {
+    if [ -e "${WATSON_DIR}/state" ]; then
+        # use jq for speed instead of parse watson output
+        test=$(jq -r .project "${WATSON_DIR}/state")
+        if [[ $test != "null" ]]; then
+            tags=$(jq -r 'reduce .tags[] as $item (""; . + " "  + $item)' $WATSON_DIR/state)
+            if [[ $tags != "" ]]; then
+                echo "⏰  ${test} -${tags}"
+            else
+                echo "⏰  ${test}"
+            fi
+        fi
+    fi
+}
 
 set_prompts() {
     # set the terminal title to the current working directory
@@ -279,6 +301,7 @@ set_prompts() {
     PS1+="\[$Green\]\$(prompt_git \" \")"   # git repository details
     PS1+=" \[$Cyan\]\$(virtualenv_info)"    # virtual environment status
     PS1+="\[$Cyan\]\${DOCKER_MACHINE_NAME}" # display docker machine name
+    PS1+="\[$Yellow\]\$(get_watson_status)"
     PS1+="\n"
     PS1+="\[$Color_Off\]❯ "                # $ or # depending on user status
 
@@ -453,9 +476,6 @@ fi
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 export HOMEBREW_NO_ANALYTICS=1
-export HOMEBREW_CASK_OPTS="--caskroom=/opt/homebrew-cask/Caskroom"
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 . /usr/local/etc/profile.d/z.sh
-
-# for FZF previous command history search `<CTRL> R`
-# [ -f ~/.fzf.bash ] && source ~/.fzf.bash
