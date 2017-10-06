@@ -23,6 +23,7 @@ brew install heroku
 brew install homebrew/dupes/less
 brew install httpie
 brew install jq
+brew install mas
 brew install mosh
 brew install neovim/neovim/neovim
 brew install nmap
@@ -100,6 +101,7 @@ brew cask install sqlitebrowser
 brew cask install steam
 brew cask install sublime-text
 brew cask install the-unarchiver
+brew cask install tickeys
 brew cask install torbrowser
 brew cask install transmission
 brew cask install virtualbox
@@ -116,6 +118,9 @@ brew tap caskroom/fonts
 brew cask install font-latin-modern
 brew cask install font-fira-code
 brew cask install font-source-code-pro
+
+mas install 1017470484 # Next Meeting
+mas install 1176895641 # Spark
 
 # misc
 bash atom-install.sh

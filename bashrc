@@ -282,9 +282,9 @@ get_watson_status() {
         if [[ $test != "null" ]]; then
             tags=$(jq -r 'reduce .tags[] as $item (""; . + " "  + $item)' $WATSON_DIR/state)
             if [[ $tags != "" ]]; then
-                echo "⏰  ${test} -${tags}"
+                echo "◉  ${test} -${tags}"
             else
-                echo "⏰  ${test}"
+                echo "◉  ${test}"
             fi
         fi
     fi
