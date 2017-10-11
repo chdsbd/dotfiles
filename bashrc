@@ -56,19 +56,6 @@ export PATH=$PATH:$GOPATH/bin
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# Default places
-alias projects='cd ~/Dropbox/chris/projects'
-alias desktop='cd ~/Desktop'
-alias downloads='cd ~/Downloads'
-alias dropbox='cd ~/Dropbox'
-alias umass='cd ~/Dropbox/chris/umass/2016-2017/spring'
-alias golang='cd $GOPATH/src/github.com/chdsbd'
-alias apps='cd ~/Applications'
-alias trash='cd ~/.Trash'
-alias homebrew='cd /usr/local/Library/Formula'
-alias caskroom='cd /usr/local/Library/Taps/caskroom'
-alias chris='cd ~/Dropbox/chris'
-
 # Use vi bindings in the shell - http://unix.stackexchange.com/a/43005
 set -o vi
 
@@ -282,9 +269,9 @@ get_watson_status() {
         if [[ $test != "null" ]]; then
             tags=$(jq -r 'reduce .tags[] as $item (""; . + " "  + $item)' $WATSON_DIR/state)
             if [[ $tags != "" ]]; then
-                echo "◉  ${test} -${tags}"
+                echo "● ${test} -${tags}"
             else
-                echo "◉  ${test}"
+                echo "● ${test}"
             fi
         fi
     fi
