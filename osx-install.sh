@@ -22,6 +22,7 @@ brew install golang
 brew install heroku
 brew install homebrew/dupes/less
 brew install httpie
+brew install ical-buddy
 brew install jq
 brew install mas
 brew install mosh
@@ -44,6 +45,7 @@ brew install ssh-copy-id
 brew install sshuttle
 brew install the_silver_searcher
 brew install tig
+brew install trash
 brew install uncrustify
 brew install wakeonlan
 brew install watchexec
