@@ -10,6 +10,7 @@ xcode-select --install
 brew install bash
 brew install ccat
 brew install chainsawbaby/formula/bash-snippets
+brew install cloc
 brew install curl
 brew install diff-so-fancy
 brew install djvu2pdf
@@ -17,6 +18,7 @@ brew install docker
 brew install ffmpeg
 brew install fish
 brew install git
+brew install git-cal
 brew install git-extras
 brew install golang
 brew install heroku
@@ -24,6 +26,8 @@ brew install homebrew/dupes/less
 brew install httpie
 brew install ical-buddy
 brew install jq
+brew install kubernetes-helm
+brew install lynx
 brew install mas
 brew install mosh
 brew install neovim/neovim/neovim
@@ -32,6 +36,10 @@ brew install npm
 brew install nyancat
 brew install pandoc
 brew install postgresql
+brew install pstree
+brew install ghi
+brew install hub
+brew install github-release
 brew install python
 brew install python3
 brew install rbenv
@@ -102,6 +110,7 @@ brew cask install spectacle
 brew cask install sqlitebrowser
 brew cask install steam
 brew cask install sublime-text
+brew cask install table-tool
 brew cask install the-unarchiver
 brew cask install tickeys
 brew cask install torbrowser
@@ -137,3 +146,12 @@ bash rb-install.sh
 sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 # Change to the new shell
 chsh -s /usr/local/bin/bash
+
+# Install rust
+curl https://sh.rustup.rs -sSf | sh
+
+# Cargo binaries
+cargo install doug
+
+# Python tools
+pip install awscli

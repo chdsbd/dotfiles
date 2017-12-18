@@ -54,7 +54,7 @@ export GOPATH=$HOME/Dropbox/$USER/projects/go
 export PATH=$PATH:$GOPATH/bin
 
 # Rust
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$PATH:$HOME/.cargo/bin"
 
 # Use vi bindings in the shell - http://unix.stackexchange.com/a/43005
 set -o vi
@@ -86,8 +86,13 @@ if hash git 2>/dev/null; then
     alias grm='git rm'
     alias gs='git status --short'
     alias gst='git stash'
+    alias gsp='git stash pop'
     alias gu='git undo'
+    # https://thepugautomatic.com/2017/02/interactive-rebase-against-the-remote-master/
+    alias grb='git rebase -i origin/master'
 fi
+
+alias info='info --vi-keys'
 
 # Bash Completion
 if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
@@ -171,6 +176,12 @@ HISTSIZE=10000
 # Number of lines of commands stored in .bash_history file persistently
 HISTFILESIZE=10000
 HISTCONTROL=ignoreboth:erasedups
+
+# https://news.ycombinator.com/item?id=15562800
+function markdown() {
+    pandoc -s -f markdown -t html "${1}" | sed 's/^<pre class/<p><\/p><pre class/' | lynx -vikeys -stdin
+}
+
 
 prompt_git() {
     # https://github.com/necolas/dotfiles
@@ -260,20 +271,10 @@ Blue='\e[0;34m'         # Blue
 Purple='\e[0;35m'       # Purple
 Cyan='\e[0;36m'         # Cyan
 
-# show watson status in prompt - https://github.com/TailorDev/Watson
-export WATSON_DIR=~/.watson
-get_watson_status() {
-    if [ -e "${WATSON_DIR}/state" ]; then
-        # use jq for speed instead of parse watson output
-        test=$(jq -r .project "${WATSON_DIR}/state")
-        if [[ $test != "null" ]]; then
-            tags=$(jq -r 'reduce .tags[] as $item (""; . + " "  + $item)' $WATSON_DIR/state)
-            if [[ $tags != "" ]]; then
-                echo "● ${test} -${tags}"
-            else
-                echo "● ${test}"
-            fi
-        fi
+doug_status() {
+    STATUS=$(/Users/chris/.cargo/bin/doug status -s)
+    if [[ $STATUS != '' ]]; then
+        echo "● ${STATUS}"
     fi
 }
 
@@ -288,7 +289,7 @@ set_prompts() {
     PS1+="\[$Green\]\$(prompt_git \" \")"   # git repository details
     PS1+=" \[$Cyan\]\$(virtualenv_info)"    # virtual environment status
     PS1+="\[$Cyan\]\${DOCKER_MACHINE_NAME}" # display docker machine name
-    PS1+="\[$Yellow\]\$(get_watson_status)"
+    PS1+="\[$Cyan\]\$(doug_status)"
     PS1+="\n"
     PS1+="\[$Color_Off\]❯ "                # $ or # depending on user status
 
@@ -343,7 +344,7 @@ if hash youtube-dl 2>/dev/null; then
     mp4() {
         youtube-dl --default-search=ytsearch: \
             --restrict-filenames \
-            --format=best "$*"
+            --format mp4 "$*"
     }
 fi
 
@@ -458,6 +459,10 @@ fi
 
 # for fzf previous command history search `<CTRL> R`
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# http://owen.cymru/fzf-ripgrep-navigate-with-bash-faster-than-ever-before/
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+bind -x '"\C-p": vim $(fzf);'
 
 # iTerm2 bash integration
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
