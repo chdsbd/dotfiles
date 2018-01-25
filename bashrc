@@ -84,7 +84,9 @@ if hash git 2>/dev/null; then
     alias gr='git remote'
     alias grb='git rebase -i origin/master'
     alias grm='git rm'
+    # https://stackoverflow.com/questions/3258243/check-if-pull-needed-in-git#comment15217406_3278427
     alias gs='git status --short'
+    alias gsr='git status -u no'
     alias gst='git stash'
     alias gsp='git stash pop'
     alias gu='git undo'
@@ -216,18 +218,25 @@ prompt_git() {
             if git rev-parse --verify refs/stash &>/dev/null; then
                 s="$s$";
             fi
-            # https://gist.github.com/woods/31967
-            # Set arrow icon based on status against remote.
-            remote_pattern="# Your branch is (.*) of"
-            if [[ $(git status 2> /dev/null) =~ ${remote_pattern} ]]; then
-                if [[ ${BASH_REMATCH[1]} == "ahead" ]]; then
-                    remote=">" # Ahead
-                else
-                    remote="<" # Behind
-                fi
-            else
-                remote="" # Equal
+
+            # https://stackoverflow.com/a/13172299/3555105
+            # get the tracking-branch name
+            git remote update &>/dev/null &
+            tracking_branch=$(git for-each-ref --format='%(upstream:short)' $(git symbolic-ref -q HEAD))
+            # creates global variables $1 and $2 based on left vs. right tracking
+            # inspired by @adam_spiers
+            args=$(git rev-list --left-right --count $tracking_branch...HEAD)
+            behind=$(echo $args |awk '{print $1}')
+            ahead=$(echo $args |awk '{print $2}')
+
+            remote=" "
+            if [[ ahead -gt 0 ]]; then
+                remote=$remote$ahead"↑"
             fi
+            if [[ behind -gt 0 ]]; then
+                remote=$remote$behind"↓"
+            fi
+
             diverge_pattern="# Your branch and (.*) have diverged"
             if [[ $(git status 2> /dev/null) =~ ${diverge_pattern} ]]; then
                 remote="<>" # Diverged
@@ -439,6 +448,8 @@ alias drm='docker rm $(docker ps -a -q)'
 alias drmv='docker volume rm $(docker volume ls -q)'
 # alias drmv='docker volume rm $(docker volume ls -qf dangling=true)'
 
+alias gist='gistit -priv --copy'
+
 # make * select normal and dot files
 shopt -s dotglob
 
@@ -471,3 +482,5 @@ export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 . /usr/local/etc/profile.d/z.sh
+
+[ -f ~/.secrets ] && source ~/.secrets
