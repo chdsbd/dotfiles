@@ -30,3 +30,7 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[github]
+	user = chdsbd
+[ghi]
+	token = !security find-internet-password -a chdsbd -s github.com -l 'ghi token' -w

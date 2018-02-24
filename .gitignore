@@ -1,2 +1,9 @@
 typescript
 atom/projects.cson
+Package Control.cache/
+*.bak
+sftp_servers/
+Gist.sublime-settings
+*.crt
+*.last-run
+*.*-ca-bundle

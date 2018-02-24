@@ -92,6 +92,7 @@ if hash git 2>/dev/null; then
     alias gu='git undo'
     # https://thepugautomatic.com/2017/02/interactive-rebase-against-the-remote-master/
     alias grb='git rebase -i origin/master'
+    alias gsa='git rev-parse HEAD'
 fi
 
 alias info='info --vi-keys'
@@ -219,28 +220,7 @@ prompt_git() {
                 s="$s$";
             fi
 
-            # https://stackoverflow.com/a/13172299/3555105
-            # get the tracking-branch name
-            git remote update &>/dev/null &
-            tracking_branch=$(git for-each-ref --format='%(upstream:short)' $(git symbolic-ref -q HEAD))
-            # creates global variables $1 and $2 based on left vs. right tracking
-            # inspired by @adam_spiers
-            args=$(git rev-list --left-right --count $tracking_branch...HEAD)
-            behind=$(echo $args |awk '{print $1}')
-            ahead=$(echo $args |awk '{print $2}')
-
             remote=" "
-            if [[ ahead -gt 0 ]]; then
-                remote=$remote$ahead"↑"
-            fi
-            if [[ behind -gt 0 ]]; then
-                remote=$remote$behind"↓"
-            fi
-
-            diverge_pattern="# Your branch and (.*) have diverged"
-            if [[ $(git status 2> /dev/null) =~ ${diverge_pattern} ]]; then
-                remote="<>" # Diverged
-            fi
 
         fi
 
@@ -448,7 +428,8 @@ alias drm='docker rm $(docker ps -a -q)'
 alias drmv='docker volume rm $(docker volume ls -q)'
 # alias drmv='docker volume rm $(docker volume ls -qf dangling=true)'
 
-alias gist='gistit -priv --copy'
+alias gist='gistit -priv | sed '\''s|Gist URL: ||'\'' | tr '\'' \n'\''  '\'' '\'' | pbcopy && printf '\''=> Gist url copied to pasteboard.\n'\'''
+alias rawgist='gistit -priv | sed '\''s|.com|.com/raw|'\'' | sed '\''s|Gist URL: ||'\'' | tr '\'' \n'\''  '\'' '\'' | pbcopy && printf '\''=> Raw gist url copied to pasteboard.\n'\'''
 
 # make * select normal and dot files
 shopt -s dotglob

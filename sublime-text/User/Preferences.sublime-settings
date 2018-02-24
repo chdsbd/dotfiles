@@ -1,0 +1,26 @@
+{
+	"animation_enabled": false,
+	"color_scheme": "Packages/User/Solarized (Light) (SL) (SublimePythonIDE) (Flake8Lint).tmTheme",
+	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
+	"font_face": "Menlo",
+	"font_size": 13,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"ignored_words":
+	[
+	],
+	"scroll_past_end": true,
+	"show_encoding": true,
+	"show_line_endings": true,
+	"spacegray_fileicons": true,
+	"spell_check": true,
+	"theme": "Adaptive.sublime-theme",
+	"trailing_spaces_modified_lines_only": true,
+	"trailing_spaces_trim_on_save": true,
+	"translate_tabs_to_spaces": true,
+	"word_wrap": "true"
+}
