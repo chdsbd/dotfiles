@@ -1,6 +1,7 @@
 [user]
   email = chris@dignam.xyz 
   name = Christopher Dignam
+  signingkey = 4DCE0863DD64E6D0
 [core]
   editor = vim 
   autocrlf = false

@@ -75,6 +75,7 @@ if hash git 2>/dev/null; then
     alias gcl='git clone'
     alias gco='git checkout'
     alias gd='git diff'
+    alias gds='git diff --staged'
     alias gl='git log --pretty=oneline --abbrev-commit'
     alias glpretty='git log --graph --decorate --pretty=oneline --abbrev-commit'
     alias gitgraph="git log --graph --oneline --all --decorate --topo-order"
@@ -87,8 +88,9 @@ if hash git 2>/dev/null; then
     # https://stackoverflow.com/questions/3258243/check-if-pull-needed-in-git#comment15217406_3278427
     alias gs='git status --short'
     alias gsr='git status -u no'
-    alias gst='git stash'
+    alias gst='git stash --keep-index --include-untracked'
     alias gsp='git stash pop'
+    alias gsa='git stash apply'
     alias gu='git undo'
     # https://thepugautomatic.com/2017/02/interactive-rebase-against-the-remote-master/
     alias grb='git rebase -i origin/master'
@@ -166,6 +168,12 @@ fi
 if [[ $OS == mac ]]; then
     alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'"
 fi
+
+# Get keys for github user
+function gitkeys() {
+    [ -z $1 ] && echo 'gitkeys <username>' && return 1
+    curl -s "https://github.com/$1.keys"
+}
 
 ## Make new shells get the history lines from all previous - https://github.com/necolas/dotfiles
 # shells instead of the default "last window closed" history

@@ -132,10 +132,12 @@ brew cask install cyberduck
 brew cask install disk-inventory-x
 brew cask install exifrenamer
 brew cask install flux
+brew cask install gpg-suite
 brew cask install grandperspective
 brew cask install imageoptim
 brew cask install keepingyouawake
 brew cask install mediainfo
+brew cask install ngrok
 brew cask install softu2f
 brew cask install spectacle
 brew cask install the-unarchiver
