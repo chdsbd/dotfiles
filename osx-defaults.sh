@@ -51,3 +51,6 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+
+# disable inline attachments in apple mail (http://www.macinstruct.com/node/502)
+defaults write com.apple.mail DisableInlineAttachmentViewing -bool no

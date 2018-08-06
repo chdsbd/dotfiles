@@ -26,6 +26,7 @@ brew install chainsawbaby/formula/bash-snippets
 brew install cloc
 brew install curl
 brew install djvu2pdf
+brew install dropbox-uploader
 brew install ffmpeg
 brew install fping
 brew install fzf
@@ -37,10 +38,12 @@ brew install htop
 brew install httpie
 brew install ical-buddy
 brew install jq
+brew install librsync
 brew install lynx
 brew install moreutils
 brew install mosh
 brew install nmap
+brew install osquery
 brew install pandoc
 brew install pstree
 brew install rename
@@ -50,7 +53,7 @@ brew install ssh-copy-id
 brew install sshuttle
 brew install telnet
 brew install tig
-brew install tmate
+brew install tmate # share terminal session
 brew install tmux
 brew install trash
 brew install tree
@@ -69,6 +72,7 @@ brew install diff-so-fancy
 brew install ghi
 brew install git-cal
 brew install git-extras
+brew install git-recent
 brew install github-release
 brew install go
 brew install hub
@@ -141,6 +145,7 @@ brew cask install ngrok
 brew cask install softu2f
 brew cask install spectacle
 brew cask install the-unarchiver
+brew cask install yo
 
 brew tap chdsbd/homebrew-port-map
 brew cask install port-map
@@ -211,6 +216,7 @@ curl https://sh.rustup.rs -sSf | sh
 
 # Cargo binaries
 cargo install doug
+cargo install imdb-rename
 
 # Python tools
 pip install awscli
