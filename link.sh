@@ -23,8 +23,5 @@ link "uncrustify.cfg" ".uncrustify.cfg"
 link "pylintrc" ".pylintrc"
 link "remarkrc" ".remarkrc"
 link "sublime-text/User" "Library/Application Support/Sublime Text 3/Packages"
+link "config/kitty/kitty.conf" ".config/kitty/kitty.conf"
 echo "dotfiles link complete!"
-
-bash itunes-install.sh
-
-echo "iTunes linking done!"

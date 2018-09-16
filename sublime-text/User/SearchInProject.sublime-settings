@@ -1,4 +1,4 @@
 {
     "search_in_project_engine": "ripgrep",
-    "search_in_project_Ripgrep_mandatory_options": "--column --no-heading --color never -F"
+    "search_in_project_Ripgrep_mandatory_options": "--column --no-heading --color never -Fi"
 }

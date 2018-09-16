@@ -1,5 +1,6 @@
 [
     {"keys": ["super+\\"], "command": "toggle_side_bar"},
     { "keys": ["ctrl+tab"], "command": "next_view" },
+    { "keys": ["ctrl+shift+i"], "command": "dash_doc"},
     { "keys": ["ctrl+shift+tab"], "command": "prev_view" }
 ]

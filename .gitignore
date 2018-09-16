@@ -7,3 +7,4 @@ Gist.sublime-settings
 *.crt
 *.last-run
 *.*-ca-bundle
+sublime-text/User/
