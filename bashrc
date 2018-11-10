@@ -468,8 +468,13 @@ bind -x '"\C-p": vim $(fzf);'
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 export HOMEBREW_NO_ANALYTICS=1
-export HOMEBREW_NO_AUTO_UPDATE=1
+# export HOMEBREW_NO_AUTO_UPDATE=1
 
 . /usr/local/etc/profile.d/z.sh
 
 [ -f ~/.secrets ] && source ~/.secrets
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
