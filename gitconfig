@@ -35,3 +35,6 @@
 	user = chdsbd
 [ghi]
 	token = !security find-internet-password -a chdsbd -s github.com -l 'ghi token' -w
+[alias]
+  # https://www.sethvargo.com/checkout-a-github-pull-request/
+  pr = "!f() { git fetch origin pull/$1/head:pr-$1 && git checkout pr-$1; }; f"

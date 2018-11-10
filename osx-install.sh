@@ -29,6 +29,7 @@ brew install djvu2pdf
 brew install dropbox-uploader
 brew install ffmpeg
 brew install fping
+brew install fpp # cli file picker
 brew install fzf
 brew install gistit
 brew install gnupg
@@ -162,6 +163,7 @@ brew cask install java
 brew cask install minikube
 brew cask install sourcetree
 brew cask install sublime-text
+brew cask install sublime-merge
 brew cask install tableplus
 brew cask install tower
 brew cask install visual-studio-code
