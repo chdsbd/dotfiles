@@ -15,15 +15,24 @@
 	[
 		"Anaconda",
 		"Jedi - Python autocompletion",
-		"SublimeLinter",
 		"Vintage"
 	],
 	"ignored_words":
 	[
 	],
 	"indent_to_bracket": true,
+	"index_exclude_patterns":
+	[
+		"*.log",
+		"node_modules/**"
+	],
 	"line_numbers": true,
 	"margin": 0,
+	"rulers":
+	[
+		80,
+		100
+	],
 	"scroll_past_end": true,
 	"scroll_speed": 1.0,
 	"show_encoding": true,
