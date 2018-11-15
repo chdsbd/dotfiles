@@ -54,3 +54,7 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 
 # disable inline attachments in apple mail (http://www.macinstruct.com/node/502)
 defaults write com.apple.mail DisableInlineAttachmentViewing -bool no
+
+# key repeat
+defaults write -g InitialKeyRepeat -int 12
+defaults write -g KeyRepeat -int 1
