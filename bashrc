@@ -32,6 +32,9 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
+alias td='cd $(mktemp -d)'
+alias tmp='td'
+
 if hash curl 2>/dev/null; then
     alias header='curl -I'
 fi
@@ -39,6 +42,10 @@ fi
 if hash ccat 2>/dev/null; then
     # better for cat abuse
     alias cat='ccat'
+fi
+if hash bat 2>/dev/null; then
+    # better for cat abuse
+    alias cat='bat'
 fi
 
 if hash wget 2>/dev/null; then
@@ -95,6 +102,8 @@ if hash git 2>/dev/null; then
     # https://thepugautomatic.com/2017/02/interactive-rebase-against-the-remote-master/
     alias grb='git rebase -i origin/master'
     alias gsa='git rev-parse HEAD'
+    # https://github.com/not-an-aardvark/git-delete-squashed
+    alias git-delete-squashed='git checkout -q master && git for-each-ref refs/heads/ "--format=%(refname:short)" | while read branch; do mergeBase=$(git merge-base master $branch) && [[ $(git cherry master $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == "-"* ]] && git branch -D $branch; done'
 fi
 
 alias info='info --vi-keys'
@@ -438,6 +447,7 @@ alias drmv='docker volume rm $(docker volume ls -q)'
 
 alias gist='gistit -priv | sed '\''s|Gist URL: ||'\'' | tr '\'' \n'\''  '\'' '\'' | pbcopy && printf '\''=> Gist url copied to pasteboard.\n'\'''
 alias rawgist='gistit -priv | sed '\''s|.com|.com/raw|'\'' | sed '\''s|Gist URL: ||'\'' | tr '\'' \n'\''  '\'' '\'' | pbcopy && printf '\''=> Raw gist url copied to pasteboard.\n'\'''
+alias hpr='hub pull-request'
 
 # make * select normal and dot files
 shopt -s dotglob
@@ -478,3 +488,5 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
+
+alias ports="lsof -PiTCP -sTCP:LISTEN"

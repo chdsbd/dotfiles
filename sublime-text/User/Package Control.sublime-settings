@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"Anaconda",
+		"AutoWrap",
 		"Awk",
 		"BracketHighlighter",
 		"Case Conversion",
@@ -22,7 +23,9 @@
 		"Emmet",
 		"File Navigator",
 		"FileCommands",
+		"FileManager",
 		"Fix Mac Path",
+		"FlowType",
 		"Gist",
 		"Git",
 		"Git Conflict Resolver",
@@ -58,6 +61,7 @@
 		"Stylus",
 		"sublack",
 		"Sublimerge 3",
+		"SyncedSideBar",
 		"SystemVerilog",
 		"Terminal",
 		"Terraform",
@@ -70,6 +74,7 @@
 		"Verilog",
 		"View In Browser",
 		"Vuejs Complete Package",
+		"Wrap Plus",
 		"x86 and x86_64 Assembly"
 	],
 	"repositories":

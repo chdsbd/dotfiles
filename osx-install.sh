@@ -13,6 +13,7 @@ brew install golang
 brew install heroku
 brew install mas
 brew install npm
+brew install yarn
 brew install python
 brew install python3
 brew install ruby
@@ -21,6 +22,7 @@ brew install z
 
 # utilities
 brew install aria2
+brew install bat
 brew install ccat
 brew install chainsawbaby/formula/bash-snippets
 brew install cloc
@@ -64,6 +66,7 @@ brew install wakeonlan
 brew install watchman
 brew install watson
 brew install wget
+brew install xmlstarlet
 brew install youtube-dl
 
 # software development
@@ -103,7 +106,7 @@ brew install nyancat
 
 
 # brew cask files
-brew cask install 1password
+brew cask install homebrew/cask-versions/1password6
 brew cask install discord
 brew cask install dropbox
 brew cask install limechat
@@ -201,7 +204,7 @@ brew cask install font-roboto
 brew cask install font-source-code-pro
 
 mas install 1017470484 # Next Meeting
-mas install 1176895641 # Spark
+mas install 456624497 # Brightness Slider
 
 # misc
 bash iterm-install.sh
@@ -219,9 +222,16 @@ curl https://sh.rustup.rs -sSf | sh
 # Cargo binaries
 cargo install doug
 cargo install imdb-rename
+cargo install cargo-cache
+cargo install cargo-add
 
 # Python tools
 pip install awscli
+pip install awsudo-py
+
+# Node
+# Similar: https://github.com/Willian-Zhang/Ignore-node_modules-in-Spotlight
+yarn global add spotlight-never-index
 
 # Ruby
 gem install jekyll
@@ -229,3 +239,4 @@ gem install lolcat
 gem install ruby-beautify
 gem install github
 gem install bundler
+gem install papertrail

@@ -19,3 +19,4 @@ Thumbs.db
 *.sw?
 *.vi
 node_modules/
+*venv/

@@ -2,6 +2,25 @@
 	"animation_enabled": false,
 	"auto_complete_commit_on_tab": false,
 	"auto_complete_delay": 50,
+	"binary_file_patterns":
+	[
+		"*.jpg",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.ico",
+		"*.eot",
+		"*.pdf",
+		"*.swf",
+		"*.jar",
+		"*.zip",
+		"node_modules/**",
+		".mypy_cache/**",
+		"*env/**"
+	],
 	"caret_style": "smooth",
 	"color_scheme": "Packages/User/Color Highlighter/themes/Solarized (Light).tmTheme",
 	"drag_text": false,
@@ -21,10 +40,6 @@
 	[
 	],
 	"indent_to_bracket": true,
-	"binary_file_patterns": ["*.jpg", "*.jpeg", "*.png", "*.gif", "*.ttf", "*.tga", "*.dds", "*.ico", "*.eot", "*.pdf", "*.swf", "*.jar", "*.zip",
-	  "node_modules/**",
-	  ".mypy_cache/**"
-	],
 	"line_numbers": true,
 	"margin": 0,
 	"rulers":
