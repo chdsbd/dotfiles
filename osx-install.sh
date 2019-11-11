@@ -68,6 +68,7 @@ brew install watson
 brew install wget
 brew install xmlstarlet
 brew install youtube-dl
+brew install sslscan
 
 # software development
 brew install cmake

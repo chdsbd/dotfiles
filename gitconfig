@@ -13,7 +13,7 @@
 [color]
   ui = auto
 [merge]
-  tool = atom
+	tool = smerge
 [filter "lfs"]
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
@@ -35,3 +35,8 @@
 	user = chdsbd
 [ghi]
 	token = !security find-internet-password -a chdsbd -s github.com -l 'ghi token' -w
+[mergetool "smerge"]
+	cmd = smerge mergetool \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+	trustExitCode = true
+[pull]
+	ff = true

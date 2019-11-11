@@ -43,10 +43,6 @@ if hash ccat 2>/dev/null; then
     # better for cat abuse
     alias cat='ccat'
 fi
-if hash bat 2>/dev/null; then
-    # better for cat abuse
-    alias cat='bat'
-fi
 
 if hash wget 2>/dev/null; then
     alias wget='wget -c'
@@ -57,11 +53,15 @@ if hash grep 2>/dev/null; then
 fi
 
 # Go setup stuff
-export GOPATH=$HOME/Dropbox/$USER/projects/go
+export GOPATH=$HOME/Documents/projects/go
 export PATH=$PATH:$GOPATH/bin
 
 # Rust
 export PATH="$PATH:$HOME/.cargo/bin"
+
+# Python
+# ~/
+export PATH="$PATH:$(python3 -m site --user-base)/bin:$(python -m site --user-base)/bin"
 
 # Use vi bindings in the shell - http://unix.stackexchange.com/a/43005
 set -o vi
@@ -76,7 +76,7 @@ fi
 # Git Aliases
 if hash git 2>/dev/null; then
     alias ga='git add'
-    alias gb='git branch'
+    # alias gb='git branch'
     alias gc='git commit'
     alias gca='git commit -a'
     alias gcl='git clone'
@@ -89,6 +89,7 @@ if hash git 2>/dev/null; then
     alias gp='git push'
     alias gps='git push --set-upstream origin $(git symbolic-ref --short HEAD)'
     alias gpl='git pull'
+    alias gplr='git pull --rebase'
     alias gr='git remote'
     alias grb='git rebase -i origin/master'
     alias grm='git rm'
@@ -461,24 +462,23 @@ shopt -s cdspell
 # append history instead of overwriting history file
 shopt -s histappend
 
+# auto cd to folder
+shopt -s autocd
+
+# expand path names
+shopt -s direxpand
+
+# expand glob
+shopt -s globstar
+
 export PATH="/usr/local/sbin:$PATH"
 
 if [ -f "$(brew --prefix)"/share/bash-completion/bash_completion ]; then
     . "$(brew --prefix)"/share/bash-completion/bash_completion
 fi
 
-# for fzf previous command history search `<CTRL> R`
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-# http://owen.cymru/fzf-ripgrep-navigate-with-bash-faster-than-ever-before/
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-bind -x '"\C-p": vim $(fzf);'
-
-# iTerm2 bash integration
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-
 export HOMEBREW_NO_ANALYTICS=1
-# export HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 . /usr/local/etc/profile.d/z.sh
 
@@ -486,7 +486,35 @@ export HOMEBREW_NO_ANALYTICS=1
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+# Modified from: https://github.com/mitsuhiko/dotfiles/blob/3c4b18c2190d94655ea64df7bc1d3d45b6abba6e/sh/myprofile#L127-L133
+alias xl="exa --group-directories-first --classify --git"
+alias xll="xl -l"
+export SKIM_DEFAULT_COMMAND="rg --files"
+sks() {
+    x=$(sk --bind "ctrl-p:toggle-preview" --ansi --preview="preview.sh {}" --preview-window=up:50%:hidden);
+    [[ $? -eq 0 ]] && subl --wait "$x" || true
+}
+rgs() {
+    x=$(sk --bind "ctrl-p:toggle-preview" --ansi -i -c "rg --color=always --line-number '{}'" --preview="preview.sh {}" --preview-window=up:50%:hidden);
+    [[ $? -eq 0 ]] && subl --wait $(echo $x | cut -d: -f1 -f2) || true
+}
+
+# for fzf previous command history search `<CTRL> R`
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# http://owen.cymru/fzf-ripgrep-navigate-with-bash-faster-than-ever-before/
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+bind -x '"\C-p": subl --wait $(sks);'
+
+
+# export PATH="~/.pyenv/shims:$PATH"
+
+export PATH="$PATH:$HOME/.poetry/bin"
 
 alias ports="lsof -PiTCP -sTCP:LISTEN"
+
+if [ `(type update_terminal_cwd | grep -q 'shell function' | wc -l) 2> /dev/null` -eq 0 ]; then
+    update_terminal_cwd() {
+        return
+    }
+fi

@@ -20,3 +20,6 @@ Thumbs.db
 *.vi
 node_modules/
 *venv/
+*.sublime-workspace
+.mypy_cache/
+*.pem
