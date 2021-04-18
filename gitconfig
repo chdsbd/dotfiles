@@ -40,3 +40,5 @@
 	trustExitCode = true
 [pull]
 	ff = true
+[fetch]
+        prune = true
