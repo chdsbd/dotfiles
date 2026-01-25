@@ -8,6 +8,9 @@ ohmyzsh/ohmyzsh path:plugins/git
 mafredri/zsh-async
 sindresorhus/pure
 
+# Vim mode
+jeffreytse/zsh-vi-mode
+
 # Fish-like suggestions.
 zsh-users/zsh-autosuggestions kind:defer
 
