@@ -1,0 +1,15 @@
+# Tab-completion for commands.
+zsh-users/zsh-completions path:src kind:fpath
+
+# git aliases like gco.
+ohmyzsh/ohmyzsh path:plugins/git
+
+# Faster prompt than starship because git is async.
+mafredri/zsh-async
+sindresorhus/pure
+
+# Fish-like suggestions.
+zsh-users/zsh-autosuggestions kind:defer
+
+# Colors command line as you type: valid=green, errors=red
+zdharma-continuum/fast-syntax-highlighting kind:defer
