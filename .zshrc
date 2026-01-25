@@ -32,4 +32,11 @@ eval "$(atuin init zsh)"
 zsh-defer eval "$(fnm env --use-on-cd --shell zsh)"
 eval "$(zoxide init zsh)"
 
+# Workaround to make vi-mode work with atuin
+# https://github.com/jeffreytse/zsh-vi-mode/issues/242#issuecomment-3291716222
+function zvm_after_init() {
+  zvm_bindkey viins '^R' atuin-search
+  zvm_bindkey vicmd '^R' atuin-search
+}
+
 # zprof
