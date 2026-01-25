@@ -16,22 +16,6 @@ source ${zsh_plugins}.zsh
 # enable vi mode.
 bindkey -v
 
-# Change cursor shape for different vi modes
-function zle-keymap-select {
-  if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
-    echo -ne '\e[2 q'
-  else
-    echo -ne '\e[6 q'
-  fi
-}
-zle -N zle-keymap-select
-
-# Start each prompt in insert mode with beam cursor
-function zle-line-init {
-  echo -ne '\e[6 q'
-}
-zle -N zle-line-init
-
 alias ls="ls -aG"
 alias gpl="git pull"
 alias ports="lsof -nP -iTCP -sTCP:LISTEN"
