@@ -13,3 +13,6 @@ zsh-users/zsh-autosuggestions kind:defer
 
 # Colors command line as you type: valid=green, errors=red
 zdharma-continuum/fast-syntax-highlighting kind:defer
+
+# Replace zsh's default completion selection menu with fzf!
+Aloxaf/fzf-tab
