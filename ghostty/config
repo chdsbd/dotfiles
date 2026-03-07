@@ -3,6 +3,7 @@ theme = "Monokai Pro"
 # Make padding more like macOS
 window-padding-x = 8
 window-padding-y = 8
+window-padding-balance = true
 
 # Make font rendering more like macOS Terminal
 font-thicken = true
