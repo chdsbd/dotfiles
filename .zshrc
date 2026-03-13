@@ -1,11 +1,16 @@
 # zmodload zsh/zprof
 export FPATH=/opt/homebrew/share/zsh/site-functions:$FPATH
 autoload -Uz compinit && compinit -C
-# Lazy-load antidote and generate the static load file only when needed
+
+# Source Antidote, so we can access the commands like:
+#   antidote update sindresorhus/pure
+#
+source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
+
+# Generate the static load file only when needed
 zsh_plugins=${ZDOTDIR:-$HOME}/.zsh_plugins
 if [[ ! ${zsh_plugins}.zsh -nt ${zsh_plugins}.txt ]]; then
   (
-    source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
     antidote bundle <${zsh_plugins}.txt >${zsh_plugins}.zsh
   )
 fi
