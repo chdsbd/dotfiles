@@ -1,3 +1,5 @@
+search_mode = "daemon-fuzzy"
+
 ## which filter mode to use
 ## possible values: global, host, session, directory
 filter_mode = "directory"
@@ -11,3 +13,8 @@ filter_mode_shell_up_key_binding = "session"
 ## possible values: auto, full, compact
 # style = "auto"
 style = "compact"
+
+
+[daemon]
+enabled = true
+autostart = true
