@@ -1,0 +1,37 @@
+[
+  {
+    "caption": "Checkout Previous Branch",
+    "command": "git",
+    "args": {"argv": ["checkout", "-"]}
+  },
+  {
+    "caption": "Switch to Previous Branch",
+    "command": "git",
+    "args": {"argv": ["checkout", "-"]}
+  },
+  {
+    "caption": "Merge Previous Branch",
+    "command": "git",
+    "args": {"argv": ["merge", "-"]}
+  },
+  {
+    "caption": "Create Empty Commit",
+    "command": "git",
+    "args": {"argv": ["commit", "--allow-empty", "-m", "empty commit"]}
+  },
+  {
+    "caption": "Undo",
+    "command": "git",
+    "args": {"argv": ["undo"]}
+  },
+  {
+    "caption": "Open Pull Request",
+    "command": "git",
+    "args": {"argv": ["open-pull-request"]}
+  },
+  {
+    "caption": "Checkout Pull Request Locally",
+    "command": "git",
+    "args": {"argv": ["gh", "pr", "checkout", "$text"]}
+  }
+]
